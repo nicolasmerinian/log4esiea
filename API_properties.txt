@@ -1,0 +1,25 @@
+// API du projet Framework Log4esiea
+
+Logger logger = Logger.getLogger(Class<?> class A);
+logger.setLevel(Level.INFO);
+logger.trace("trace");
+logger.debug("debug");
+logger.info("info");
+logger.warn("warn");
+logger.error("error");
+logger.fatal("fatal");
+logger.format("dd/MM/yyyy" hh:mm:ss);
+
+
+
+// Propriétés
+
+appender.console = TRUE
+appender.file = TRUE
+appender.database = TRUE
+appender.login = user
+database.table = log
+level = INFO
+formatter = SIMPLE
+format = dd/MM/yyyy hh:mm:ss
+filename = logs.txt
