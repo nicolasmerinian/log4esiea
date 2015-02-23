@@ -4,11 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import fr.esiea.log4esiea.Level;
+
 
 public class Logger {
 	private static Logger logger;
 	private static Map<Class<?>, Logger> map = new HashMap<Class<?>, Logger>();
 	private Class<?> targetClass;
+	private Level level;
 	public ArrayList appenders;
 	
 	private Logger() {
@@ -32,6 +35,15 @@ public class Logger {
 			map.put(c, logger);
 		}
 		return logger;
+	}
+	
+
+	public void setLevel(Level level) {
+		this.level = level;
+	}
+	
+	public Level getLevel() {
+		return this.level;
 	}
 
 	@Override
