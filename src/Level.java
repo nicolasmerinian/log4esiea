@@ -1,4 +1,3 @@
-package log4esiea;
 
 public enum Level {
 	
