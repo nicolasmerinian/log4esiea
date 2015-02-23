@@ -1,21 +1,36 @@
 package Logger;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Logger {
 	private static Logger logger;
+	private static Map<Class<?>, Logger> map = new HashMap<Class<?>, Logger>();
+	private Class<?> targetClass;
 	public ArrayList appenders;
 	
-	public Logger() {
+	private Logger() {
 		super();
 	}
 
-	public static Logger getLogger() {
-		return logger;
+	private Logger(Class<?> targetClass) {
+		this();
+		this.targetClass = targetClass;
+		this.appenders = new ArrayList();
 	}
 
-	public static void setLogger(Logger logger) {
-		Logger.logger = logger;
+	public static Logger getLogger(Class<?> targetClass) {
+		return get(targetClass);
+	}
+	
+	public static Logger get(Class<?> c) {
+		logger = map.get(c);
+		if (logger == null) {
+			logger = new Logger(c);
+			map.put(c, logger);
+		}
+		return logger;
 	}
 
 	@Override
