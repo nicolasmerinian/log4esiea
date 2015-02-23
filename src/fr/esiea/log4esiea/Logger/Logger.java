@@ -7,7 +7,7 @@ import java.util.Map;
 import fr.esiea.log4esiea.Level;
 
 
-public class Logger {
+public class Logger extends AbstractLogger {
 	private static Logger logger;
 	private static Map<Class<?>, Logger> map = new HashMap<Class<?>, Logger>();
 	private Class<?> targetClass;
@@ -75,6 +75,42 @@ public class Logger {
 		} else if (!appenders.equals(other.appenders))
 			return false;
 		return true;
+	}
+
+	@Override
+	public void trace(String message) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void debug(String message) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void info(String message) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void warn(String message) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void error(String message) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void fatal(String message) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
