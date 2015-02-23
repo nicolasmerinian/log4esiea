@@ -48,7 +48,12 @@ public class Logger extends AbstractLogger {
 
 	@Override
 	public String toString() {
-		return "Logger []";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Logger=[");
+		builder.append("class=");
+		builder.append(this.targetClass);
+		builder.append("]");
+		return builder.toString();
 	}
 
 	@Override
