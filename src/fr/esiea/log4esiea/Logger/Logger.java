@@ -117,6 +117,12 @@ public class Logger extends AbstractLogger {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	protected void loadProperties() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }
