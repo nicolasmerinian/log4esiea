@@ -1,4 +1,4 @@
-package fr.esiea.log4esiea.Logger;
+package fr.esiea.log4esiea.logger;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -123,6 +123,5 @@ public class Logger extends AbstractLogger {
 		// TODO Auto-generated method stub
 		
 	}
-	
 	
 }

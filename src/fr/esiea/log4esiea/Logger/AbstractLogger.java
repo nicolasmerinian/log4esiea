@@ -1,4 +1,4 @@
-package fr.esiea.log4esiea.Logger;
+package fr.esiea.log4esiea.logger;
 
 public abstract class AbstractLogger implements LoggerInterface {
 	public abstract void trace(String message);
@@ -7,4 +7,5 @@ public abstract class AbstractLogger implements LoggerInterface {
 	public abstract void warn(String message);
 	public abstract void error(String message);
 	public abstract void fatal(String message);
+	protected abstract void loadProperties();
 }

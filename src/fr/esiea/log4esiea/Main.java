@@ -1,6 +1,6 @@
 package fr.esiea.log4esiea;
 
-import fr.esiea.log4esiea.Logger.Logger;
+import fr.esiea.log4esiea.logger.Logger;
 
 public class Main {
 

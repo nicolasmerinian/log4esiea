@@ -1,4 +1,4 @@
-package fr.esiea.log4esiea.Logger;
+package fr.esiea.log4esiea.logger;
 
 public interface LoggerInterface {
 	public void trace(String message);
