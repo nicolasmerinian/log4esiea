@@ -13,7 +13,7 @@ public class DatabaseHandler implements Handler {
 
 	@Override
 	public void print(String message) {
-		String url = "jdbc:mysql://localhost:3307";
+		String url = "jdbc:mysql://localhost:3307/log4esiea";
 		String login = "kokumo";
 		String password = "password";
 		Connection cn = null;
