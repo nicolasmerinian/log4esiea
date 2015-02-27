@@ -44,7 +44,7 @@ public class SimpleFormatter implements Formatter {
 
 	@Override
 	public String format(String message, String className, String methodName, int lineNumber) {
-		return null;
+		return this.getLevel() + " " + className + "." + methodName + " l." + lineNumber + " : " + message;
 	}
 
 	
