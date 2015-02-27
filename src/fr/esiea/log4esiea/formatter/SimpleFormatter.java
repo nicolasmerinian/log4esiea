@@ -4,29 +4,49 @@ import fr.esiea.log4esiea.Level;
 
 public class SimpleFormatter implements Formatter {
 
-	@Override
+	private Level level;
+	private String format;
+
+	public SimpleFormatter() {
+		super();
+	}
+	
+	public SimpleFormatter(Level level) {
+		this();
+		this.level = level;
+	}
+	
+	public SimpleFormatter(String format) {
+		this();
+		this.format = format;
+	}
+	
+	public SimpleFormatter(Level level, String format) {
+		this(level);
+		this.format = format;
+	}
+
+	public Level getLevel() {
+		return level;
+	}
+
 	public void setLevel(Level level) {
-		// TODO Auto-generated method stub
-		
+		this.level = level;
 	}
 
-	@Override
-	public void setFormat(String format) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public String getFormat() {
-		// TODO Auto-generated method stub
-		return null;
+		return format;
+	}
+	
+	public void setFormat(String format) {
+		this.format = format;
 	}
 
 	@Override
-	public String format(String message, String className, String methodName,
-			int lineNumber) {
-		// TODO Auto-generated method stub
+	public String format(String message, String className, String methodName, int lineNumber) {
 		return null;
 	}
+
+	
 
 }
