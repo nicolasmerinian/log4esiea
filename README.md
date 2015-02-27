@@ -1,4 +1,4 @@
-# log4esiea - Projet de Design Objet - NGUYEN, MERINIAN, OZADANIR
+# Log4Esiea - Projet de Design Objet - NGUYEN, MERINIAN, OZADANIR
 Framework de Logging
 
 Dans le dossier /src, on trouve un fichier config.properties dans lequel on peut paramétrer différentes fonctionnalités.
