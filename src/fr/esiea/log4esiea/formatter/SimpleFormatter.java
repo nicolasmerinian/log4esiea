@@ -51,7 +51,7 @@ public class SimpleFormatter implements Formatter {
 	public String format(String message, String className, String methodName, int lineNumber) {
 		StringBuilder formattedMessage = new StringBuilder();
 	    MyDate date = Utils.getMyDate();
-		String keyString = "(dd|MM|yyyy|hh|mm|ss|L|C|D|r|x|\\(|\\)|\\[|\\]|:| |/|-|.)";
+		String keyString = "(dd|MM|yyyy|yy|hh|mm|ss|l|L|C|D|r|x|X|\\(|\\)|\\[|\\]|:| |/|-|.)";
 		Pattern p = Pattern.compile(keyString);
 		Matcher m = p.matcher(this.format);
 		while (m.find()) {
@@ -62,6 +62,9 @@ public class SimpleFormatter implements Formatter {
 		    	break;
 		    case "MM":
 		    	formattedMessage.append(date.getMonth());
+		    	break;
+		    case "yy":
+		    	formattedMessage.append(date.getYear().substring(2));
 		    	break;
 		    case "yyyy":
 		    	formattedMessage.append(date.getYear());
@@ -74,6 +77,11 @@ public class SimpleFormatter implements Formatter {
 		    	break;
 		    case "ss":
 		    	formattedMessage.append(date.getSecond());
+		    	break;
+		    case "l":
+		    	formattedMessage.append(this.level.name().substring(0, 1)
+		    			.toUpperCase().concat(this.level.name().substring(1)
+		    					.toLowerCase()));
 		    	break;
 		    case "L":
 		    	formattedMessage.append(this.level.name());
@@ -89,6 +97,9 @@ public class SimpleFormatter implements Formatter {
 		    	break;
 		    case "x":
 		    	formattedMessage.append(message);
+		    	break;
+		    case "X":
+		    	formattedMessage.append(message.toUpperCase());
 		    	break;
 		    default:
 		    	formattedMessage.append(matched);
